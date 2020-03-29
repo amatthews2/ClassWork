@@ -1,61 +1,72 @@
 
 
-# calculator.py
-
-
+# calculator.py GLOBAL PART OF CODE
+import math
 #define a function and then skips that function until it is called
 def add(x, y):
 	z = x + y
 	print(" {} + {} = {}".format(x, y, z))
 	return z
-
 def multiply(x, y):
 	z = x * y
 	print(" {} * {} = {}".format(x, y, z))
 	return z
-	
 def subtract(x, y):
 	z = x - y
+	
 	print(" {} * {} = {}".format(x, y, z))
 	return z
-
 def multiply(x, y):
 	z = x / y
 	print(" {} * {} = {}".format(x, y, z))
 	return z
-
 def divide(x, y):
 	z = x / y
 	print(" {} / {} = {}".format(x, y, z))
 	return z
+def square_root(x, y):
+	z = math.sqrt(x)
+	print(" {} root {} = {}".format(x, y, z))
+	return z
+	
+#basics (CODE)
 
-#basics
-x = input("Enter a letter: ")
-print("you entered {}".format(x))
+if __name__ = "__main__":
+	x = input("Enter a letter: ")
+	print("you entered {}".format(x))
+	#print(x)
+	num1 = float(input("Enter first number: "))
+	num2 = float(input("Enter second number: "))
 
-#print(x)
+	#the double == is a compare
+	#the = is assign
+	# the colon the start of the block of code (indented 4 spaces)
 
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
 
-#the double == is a compare
-#the = is assign
-# the colon the start of the block of code (indented 4 spaces)
-if x == "a":
-	e = add(num1, num2)
-	if e > 100:
-		print("num too high")
-elif x == "s":
-	e = subtract(num1, num2)
-	if e > 100:
-		print("num too high")
-elif x == "m":
-	e = multiply(num1, num2)
-	if e > 100:
-		print("num too high")
-elif x == "d":
-	e = divide(num1, num2)
-	if e > 100:
-		print("num too high")
-else:
-    print("The {} command is not recognized".format(x))
+
+
+	if x == "a":
+		e = add(num1, num2)
+		if e > 100:
+			print("num too high")
+	elif x == "s":
+		e = subtract(num1, num2)
+		if e > 100:
+			print("num too high")
+	elif x == "m":
+		e = multiply(num1, num2)
+		if e > 100:
+			print("num too high")
+	elif x == "d":
+		e = divide(num1, num2)
+		if e > 100:
+			print("num too high")
+	elif x == "r":
+		e = square_root(num1, num2)
+		if e > 100:
+			print("num too high")
+	else:
+		print("The {} command is not recognized".format(x))
+
+
+	print(math.sqrt(25))
